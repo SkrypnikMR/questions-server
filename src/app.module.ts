@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { SwaggerModule } from '@nestjs/swagger';
 
@@ -9,6 +9,7 @@ import { YmlModule } from './yml/yml.module';
 import { CsvModule } from './csv/csv.module';
 import { XmlModule } from './xml/xml.module';
 import { PrintModule } from './print/print.module';
+import { RequestLoggerMiddleware } from './request-logger.middleware';
 
 @Module({
   imports: [
@@ -21,6 +22,10 @@ import { PrintModule } from './print/print.module';
     PrintModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, RequestLoggerMiddleware],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(RequestLoggerMiddleware).forRoutes('*');
+  }
+}
