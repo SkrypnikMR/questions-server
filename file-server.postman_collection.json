@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "2d7187dd-7a79-4b5c-8364-7267f3149fd4",
+		"name": "file-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16046164"
+	},
+	"item": [
+		{
+			"name": "Get all questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create all types question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"types\": [\"yml\", \"json\", \"csv\", \"xml\"],\r\n    \"text\": \"test-question-3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5247/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get json questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/questions?type=json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "json",
+							"description": "Json type for questions"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create json question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"types\": [\"json\"],\r\n    \"text\": \"test-question-json\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5247/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get yml questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/questions?type=yml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "yml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create yml question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"types\": [\"yml\"],\r\n    \"text\": \"test-question-yml\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5247/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get csv questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/questions?type=csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "csv"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create csv question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"types\": [\"csv\"],\r\n    \"text\": \"test-question-csv\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5247/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get xml questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/questions?type=xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "xml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create xml question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"types\": [\"xml\"],\r\n    \"text\": \"test-question-xml\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5247/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all files info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get file by json type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/data?type=json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get file by csv type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/data?type=csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "csv"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get file by xml type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/data?type=xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "xml"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get file by yml type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5247/data?type=yml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5247",
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "yml"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
